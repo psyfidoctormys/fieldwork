@@ -23,8 +23,17 @@ Route::get('/', function () {
 Route::get('/', [PagesController::class, 'index']);
 //Other routes
 Route::get('/about', [PagesController::class, 'about']);
-Route::get('/services', [PagesController::class, 'services']);
+Route::get('/service', [PagesController::class, 'service']);
+Route::get('/lvtableview', [PagesController::class, 'lvtableview']);
 
-Route::get('/about', function(){
+/*Route::get('/about', function(){
     return view('pages.about');
 });
+
+Route::get('/service', function(){
+    return view('pages.service');
+});
+
+Route::get('/lvtableview', function(){
+    return view('pages.lvtableview');
+});*/

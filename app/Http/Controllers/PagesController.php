@@ -12,7 +12,10 @@ class PagesController extends Controller
     public function about(){
         return view('pages.about');
     }
-    public function services(){
-        return view('pages.services');
+    public function service(){
+        return view('pages.service');
+    }
+    public function lvtableview(){
+        return view('pages.lvtableview');
     }
 }
