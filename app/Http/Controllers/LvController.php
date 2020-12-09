@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
+use App\Models\Lv;
 
-class PostsController extends Controller
+class LvController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,9 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
-        return view('posts.index')->with('posts', $posts);
+        //lv::all is the model name whereas lv.index is the folder and page ref
+        $lvs = Lv::all();
+        return view('lv.index')->with('lv', $lvs);
     }
 
     /**

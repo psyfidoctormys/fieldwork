@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class LV extends Model
 {
     use HasFactory;
     //Table Name
-    protected $table = 'posts';
+    protected $table = 'lv_T';
     //Primary Key
-    public $primaryKey = 'id';
+    public $primaryKey = 'sample';
     //Timestamps
-    public $timestamps = true;
+    //public $timestamps = true;
 }
