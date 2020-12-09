@@ -17,15 +17,7 @@
             <a class="nav-link" href="/service">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/lvtableview">LabVantage Table</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdown01">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            <a class="nav-link" href="/lv">LabVantage Table</a>
           </li>
         </ul>
         <form class="d-flex">
