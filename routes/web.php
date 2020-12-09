@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 //add controller for Laravel 8
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,3 +39,5 @@ Route::get('/service', function(){
 Route::get('/lvtableview', function(){
     return view('pages.lvtableview');
 });*/
+
+Route::resource('/posts', PostsController::class);
