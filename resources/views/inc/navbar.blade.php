@@ -17,7 +17,10 @@
             <a class="nav-link" href="/service">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/lv">LabVantage Table</a>
+            <a class="nav-link" href="/lv">LabVantage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/redcap">RedCap</a>
           </li>
         </ul>
         <form class="d-flex">
