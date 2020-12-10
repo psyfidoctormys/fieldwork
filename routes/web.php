@@ -45,4 +45,4 @@ Route::get('/lvtableview', function(){
 Route::resource('/posts', PostsController::class);
 Route::resource('/lv', LvController::class);
 
-//Route::get('/rc', [RedCapController::class, 'callMyAPI']);
+Route::get('/redcap', [RedCapController::class, 'callMyAPI']);

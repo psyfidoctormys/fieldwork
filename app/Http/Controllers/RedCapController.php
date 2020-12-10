@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RedCap;
+use DB;
 
 class RedCapController extends Controller
 {
@@ -107,8 +108,10 @@ class RedCapController extends Controller
         curl_setopt($ch, CURLOPT_FRESH_CONNECT, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data, '', '&'));
         $output = curl_exec($ch);
-        print $output;
-        //return $output;
+        //print $output;
+        $outputs = json_decode($output, true);
+        //return $outputs;
+        return view('redcap.index')->with(['outputs'=>$outputs]);
         curl_close($ch);
     }
 }
