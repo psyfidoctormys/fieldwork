@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
-use DB;
+use App\Models\RedCap;
 
-class PostsController extends Controller
+class RedCapController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,14 +14,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //$posts = Post::orderBy('title','desc')->get(); 
-        //$posts = Post::all();
-        //$posts = Post::orderBy('title','desc')->take(1)->get();
-        // return $post = Post::where('title','Post Two')->get();
-        //$posts = DB::select('SELECT * FROM posts');
-        //pagination
-        $posts = Post::orderBy('title','desc')->paginate(10); 
-        return view('posts.index')->with('posts', $posts);
+        return view('redcap.index');
     }
 
     /**
@@ -54,9 +46,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //return model::find(key)
-        $post = Post::find($id);
-        return view('posts.show')->with('post', $post);
+        //
     }
 
     /**
@@ -91,5 +81,34 @@ class PostsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function callMyAPI(){
+        $data = array(
+            'token' => '8D9E5A5083FE5B8101EA045CD6CC8C14',
+            'content' => 'report',
+            'format' => 'json',
+            'report_id' => '377',
+            'csvDelimiter' => '',
+            'rawOrLabel' => 'raw',
+            'rawOrLabelHeaders' => 'label',
+            'exportCheckboxLabel' => 'true',
+            'returnFormat' => 'json'
+        );
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'http://localhost/redcap/api/');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_VERBOSE, 0);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_AUTOREFERER, true);
+        curl_setopt($ch, CURLOPT_MAXREDIRS, 10);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+        curl_setopt($ch, CURLOPT_FRESH_CONNECT, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data, '', '&'));
+        $output = curl_exec($ch);
+        print $output;
+        //return $output;
+        curl_close($ch);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Lv;
+use DB;
 
 class LvController extends Controller
 {
@@ -16,7 +17,7 @@ class LvController extends Controller
     {
         //lv::all is the model name whereas lv.index is the folder and page ref
         $lvs = Lv::all();
-        return view('lv.index')->with('lv', $lvs);
+        return view('lv.index')->with('lvs', $lvs);
     }
 
     /**

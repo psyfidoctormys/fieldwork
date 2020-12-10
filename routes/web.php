@@ -6,6 +6,8 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\LvController;
 
+use App\Http\Controllers\RedCapController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,7 +29,6 @@ Route::get('/', [PagesController::class, 'index']);
 //Other routes
 Route::get('/about', [PagesController::class, 'about']);
 Route::get('/service', [PagesController::class, 'service']);
-Route::get('/lvtableview', [PagesController::class, 'lvtableview']);
 
 /*Route::get('/about', function(){
     return view('pages.about');
@@ -43,3 +44,5 @@ Route::get('/lvtableview', function(){
 
 Route::resource('/posts', PostsController::class);
 Route::resource('/lv', LvController::class);
+
+//Route::get('/rc', [RedCapController::class, 'callMyAPI']);

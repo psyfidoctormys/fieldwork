@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>LabVantage</h1>
+    <h1>RedCap Completion Checklist Data</h1>
     <table class="table table-striped">
         <thead class="bg-primary text-white">
             <tr>
@@ -25,29 +25,10 @@
             </tr>
         </thead>
             <tbody>
-    @if(count($lvs) > 0)
-        @foreach($lvs as $lv)
-            <tr>
-            <th>{{$lv->cpCohort}}</th>
-            <th>{{$lv->clinicalEvent}}</th>
-            <th>{{$lv->sampleType}}</th>
-            <th>{{$lv->externalSubject}}</th>
-            <th>{{$lv->sample}}</th>
-            <th>{{$lv->currentLocation}}</th>
-            <th>{{$lv->container}}</th>
-            <th>{{$lv->preptype}}</th>
-            <th>{{$lv->treatmentMethod}}</th>
-            <th>{{$lv->initialMass}}</th>           
-            <th>{{$lv->initialmassUnits}}</th>  
-            <th>{{$lv->initialVolume}}</th>  
-            <th>{{$lv->initialvolumeUnits}}</th>  
-            <th>{{$lv->collection}}</th>  
-            <th>{{$lv->clinicalProtocol}}</th>  
-            <th>{{$lv->storageStatus}}</th>  
-            <th>{{$lv->studysite}}</th>  
-            </tr>
+    @if(count($output) > 0)
+        @foreach($ch as $ch)
+        <th>{{$ch}}</th>
         @endforeach
-
     @else
         <p>No samples found</p>
     @endif

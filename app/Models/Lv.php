@@ -10,8 +10,9 @@ class LV extends Model
     use HasFactory;
     //Table Name
     protected $table = 'lv_T';
+    //protected $table = 'lv_samples';
     //Primary Key
-    public $primaryKey = 'sample';
+    // public $primaryKey = 'sample';
     //Timestamps
     //public $timestamps = true;
 }
