@@ -12,10 +12,10 @@
             </tr>
         </thead>
             <tbody>
-                @if(count($outputs) > 0)
+            @if(count($outputs) > 0)
                 @foreach($outputs as $o)
-                <tr>
-                    <th>{{$o->ffq}}</th> 
+                    <tr>
+                        <th>{{$o['hhid']}}</th> 
                     </tr>
                 @endforeach
         
