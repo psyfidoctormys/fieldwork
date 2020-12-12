@@ -6,8 +6,20 @@ use Illuminate\Http\Request;
 use App\Models\RedCap;
 use DB;
 
+use App\Repositories\MyDataInterface;
+
 class RedCapController extends Controller
 {
+
+    private $my_data_interface;
+    public function __construct(MyDataInterface $my_data_interface_class_variable) {
+        $this->my_data_interface = $my_data_interface_class_variable;
+    }
+
+    public function helloworld() {
+        $this->my_data_interface->helloworld();
+    }
+
     /**
      * Display a listing of the resource.
      *

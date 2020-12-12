@@ -7,6 +7,8 @@ use App\Http\Controllers\PostsController;
 use App\Http\Controllers\LvController;
 
 use App\Http\Controllers\RedCapController;
+use App\Http\Controllers\ComboController;
+use App\Http\Controllers\TransController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,11 +43,16 @@ Route::get('/service', function(){
 Route::get('/lvtableview', function(){
     return view('pages.lvtableview');
 });*/
-
+//tutorial controller
 Route::resource('/posts', PostsController::class);
+//OG LV Controller
 Route::resource('/lv', LvController::class);
-
+//OG RedCap Controller
 Route::get('/redcap', [RedCapController::class, 'callMyAPI']);
+Route::get('/link-helloworld', [RedCapController::class, 'helloworld']);
+//Combined controller
+Route::get('/combo', [ComboController::class, 'index']);
 
+//upload file controllers
 Route::get('/trans', [TransController::class, 'index']);
 Route::post('/trans/uploadFile', [TransController::class, 'uploadFile']);

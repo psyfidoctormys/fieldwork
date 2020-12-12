@@ -16,22 +16,11 @@
             </tr>
         </thead>
             <tbody>
-            @if(count($outputs) > 0)
-                @foreach($outputs as $o)
-                    <tr>
-                        <th>{{$o['hhid']}}</th>
-                        <th>{{$o['redcap_event_name']}}</th>
-                    </tr>
-                @endforeach
-        
-            @else
-                <p>No samples found</p>
-            @endif
-            @if(count($lvs) > 0)
-            @foreach($lvs as $lv)
+            @if(count($cvs) > 0)
+            @foreach($cvs as $cv)
                 <tr>
-                <th>{{$lv->hhid}}</th>
-                <th>{{$lv->visit_sampleType}}</th>
+                <th>{{$cv->hhid}}</th>
+                <th>{{$cv->visit_sampleType}}</th>
                 </tr>
             @endforeach
     
