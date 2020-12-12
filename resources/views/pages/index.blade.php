@@ -6,4 +6,4 @@
         <p>This is the Fieldwork Project to create a dashboard for sample management between Redcap and LabVantage</p>
         <p><a class="btn btn-primary btn-lg" href="/login" role="button">Login</a> <a class="btn btn-success btn-lg" href="/register" role="button">Register</a></p>
         </div>
-        @endsection
+@endsection

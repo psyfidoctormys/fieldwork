@@ -17,7 +17,7 @@ class RedCapController extends Controller
     }
 
     public function helloworld() {
-        $this->my_data_interface->helloworld();
+        return $this->my_data_interface->helloworld();
     }
 
     /**
@@ -123,7 +123,44 @@ class RedCapController extends Controller
         //print $output;
         $outputs = json_decode($output, true);
         //return $outputs;
-        return view('redcap.index')->with(['outputs'=>$outputs]);
+        return view('combo.index')->with([
+            'outputs'=>$outputs, 
+            'lvs' => $this->my_data_interface->helloworld()
+            ]);
         curl_close($ch);
+
+    }
+    public function callMyAPI2(){
+        $data = array(
+            'token' => '8D9E5A5083FE5B8101EA045CD6CC8C14',
+            'content' => 'report',
+            'format' => 'json',
+            'report_id' => '377',
+            'csvDelimiter' => '',
+            'rawOrLabel' => 'raw',
+            'rawOrLabelHeaders' => 'label',
+            'exportCheckboxLabel' => 'true',
+            'returnFormat' => 'json'
+        );
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'http://localhost/redcap/api/');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_VERBOSE, 0);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_AUTOREFERER, true);
+        curl_setopt($ch, CURLOPT_MAXREDIRS, 10);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+        curl_setopt($ch, CURLOPT_FRESH_CONNECT, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data, '', '&'));
+        $output = curl_exec($ch);
+        //print $output;
+        $outputs = json_decode($output, true);
+        //return $outputs;
+        return view('redcap.index')->with([
+            'outputs'=>$outputs, 
+            ]);
+        curl_close($ch);
+
     }
 }

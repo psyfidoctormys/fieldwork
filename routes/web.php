@@ -48,10 +48,9 @@ Route::resource('/posts', PostsController::class);
 //OG LV Controller
 Route::resource('/lv', LvController::class);
 //OG RedCap Controller
-Route::get('/redcap', [RedCapController::class, 'callMyAPI']);
-Route::get('/link-helloworld', [RedCapController::class, 'helloworld']);
+Route::get('/redcap', [RedCapController::class, 'callMyAPI2']);
 //Combined controller
-Route::get('/combo', [ComboController::class, 'index']);
+Route::get('/combo', [RedCapController::class, 'callMyAPI']);
 
 //upload file controllers
 Route::get('/trans', [TransController::class, 'index']);

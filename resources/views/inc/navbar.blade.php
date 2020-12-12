@@ -13,14 +13,20 @@
           <li class="nav-item">
             <a class="nav-link" href="/about">About</a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" href="/service">Services</a>
+          </li>-->
+          <li class="nav-item">
+            <a class="nav-link" href="/trans">LV File Upload</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/lv">LabVantage</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/redcap">RedCap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/combo">Comparison</a>
           </li>
         </ul>
         <form class="d-flex">

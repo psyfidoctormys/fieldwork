@@ -16,11 +16,11 @@
             </tr>
         </thead>
             <tbody>
-            @if(count($cvs) > 0)
-            @foreach($cvs as $cv)
+            @if(count($lvs) > 0)
+            @foreach($lvs as $lv)
                 <tr>
-                <th>{{$cv->hhid}}</th>
-                <th>{{$cv->visit_sampleType}}</th>
+                <th>{{$lv->hhid}}</th>
+                <th>{{$lv->visit_sampleType}}</th>
                 </tr>
             @endforeach
     
