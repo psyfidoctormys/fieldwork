@@ -55,3 +55,6 @@ Route::get('/combo', [RedCapController::class, 'callMyAPI']);
 //upload file controllers
 Route::get('/trans', [TransController::class, 'index']);
 Route::post('/trans/uploadFile', [TransController::class, 'uploadFile']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
