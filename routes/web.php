@@ -46,3 +46,6 @@ Route::resource('/posts', PostsController::class);
 Route::resource('/lv', LvController::class);
 
 Route::get('/redcap', [RedCapController::class, 'callMyAPI']);
+
+Route::get('/trans', [TransController::class, 'index']);
+Route::post('/trans/uploadFile', [TransController::class, 'uploadFile']);

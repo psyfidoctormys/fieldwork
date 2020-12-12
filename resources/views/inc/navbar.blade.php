@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">{{config('app.name','FIELDWORK')}}</a>
+      <a class="navbar-brand" href="/">    <img src="/images/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">{{config('app.name','FIELDWORK')}}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
