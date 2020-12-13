@@ -4,9 +4,9 @@ namespace App\Repositories;
 
 interface MyDataInterface {
 
-    public function helloworld();
-    public function find($id);
-    public function sample($id);
+    public function lvresults();
+    public function find($sample);
+    public function sample($sample);
 
 
 

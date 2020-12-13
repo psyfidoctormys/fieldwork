@@ -5,7 +5,7 @@ use App\Models\Lv;
 
 class MyRepository implements MyDataInterface {
 
-    public function helloworld(){
+    public function lvresults(){
         return Lv::all();
     }
 

@@ -14,10 +14,11 @@ class RedCapController extends Controller
     private $my_data_interface;
     public function __construct(MyDataInterface $my_data_interface_class_variable) {
         $this->my_data_interface = $my_data_interface_class_variable;
+        $this->middleware('auth');
     }
 
-    public function helloworld() {
-        return $this->my_data_interface->helloworld();
+    public function lvresults() {
+        return $this->my_data_interface->lvresults();
     }
 
     /**
@@ -125,7 +126,7 @@ class RedCapController extends Controller
         //return $outputs;
         return view('combo.index')->with([
             'outputs'=>$outputs, 
-            'lvs' => $this->my_data_interface->helloworld()
+            'lvs' => $this->my_data_interface->lvresults()
             ]);
         curl_close($ch);
 

@@ -3,11 +3,10 @@
 use Illuminate\Support\Facades\Route;
 //add controller for Laravel 8
 use App\Http\Controllers\PagesController;
-use App\Http\Controllers\PostsController;
+//use App\Http\Controllers\PostsController;
 use App\Http\Controllers\LvController;
 
 use App\Http\Controllers\RedCapController;
-use App\Http\Controllers\ComboController;
 use App\Http\Controllers\TransController;
 
 /*
@@ -30,7 +29,7 @@ Route::get('/', function () {
 Route::get('/', [PagesController::class, 'index']);
 //Other routes
 Route::get('/about', [PagesController::class, 'about']);
-Route::get('/service', [PagesController::class, 'service']);
+//Route::get('/service', [PagesController::class, 'service']);
 
 /*Route::get('/about', function(){
     return view('pages.about');
@@ -44,7 +43,7 @@ Route::get('/lvtableview', function(){
     return view('pages.lvtableview');
 });*/
 //tutorial controller
-Route::resource('/posts', PostsController::class);
+//Route::resource('/posts', PostsController::class);
 //OG LV Controller
 Route::resource('/lv', LvController::class);
 //OG RedCap Controller

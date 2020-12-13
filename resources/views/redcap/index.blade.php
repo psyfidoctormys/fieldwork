@@ -337,5 +337,6 @@
             @else
                 <p>No samples found</p>
             @endif
-    </table>
+            </tbody>
+        </table>
 @endsection

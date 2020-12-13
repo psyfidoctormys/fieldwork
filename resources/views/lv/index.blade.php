@@ -51,5 +51,6 @@
     @else
         <p>No samples found</p>
     @endif
+            </tbody>
     </table>
 @endsection

@@ -10,6 +10,6 @@
      <form method='post' action='/trans/uploadFile' enctype='multipart/form-data' >
        {{ csrf_field() }}
        <input type='file' name='file' >
-       <input type='submit' name='submit' value='Import'>
+       <input class="btn btn-success btn-lg" type='submit' name='submit' value='Import'>
      </form>
 @endsection
