@@ -76,8 +76,8 @@
                 <th scope="col">12month Spot Blood Date</th>
                 <th scope="col">12month Venous Blood (Y/N)</th>
                 <th scope="col">12month Venous Blood Date/th>
-                <th scope="col">18month Venous Blood (Y/N)</th>
-                <th scope="col">18month Venous Blood Date</th>
+                <th scope="col">18month Spot Blood (Y/N)</th>
+                <th scope="col">18month Spot Blood Date</th>
                 <th scope="col">2year Spot Blood (Y/N)</th>
                 <th scope="col">2year Spot Blood Date</th>
                 <th scope="col">2year Venous Blood (Y/N)</th>
@@ -163,7 +163,7 @@
                 <th scope="col">ECHO-Tooth#4 (Y/N)</th>
                 <th scope="col">ECHO-Tooth#4 Date</th>
                 <th scope="col">ECHO-Tooth#5 (Y/N)</th>
-                <th scope="col">RC Repeat Instance</th>
+                <th scope="col">ECHO-Tooth#5 Date</th>
                 <th scope="col">Complete (Y/N)</th>
             </tr>
         </thead>

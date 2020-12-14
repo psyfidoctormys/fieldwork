@@ -10,6 +10,84 @@
                 <tr>
                     <th scope="col">RedCap Household ID</th>
                     <th scope="col">RedCap Pregnancy Arm</th>
+                    <th scope="col">Maternal Consent Date</th>
+                    <th scope="col">Withdrawn Date</th>
+                    <th scope="col">2T Spot Blood Date</th>
+                    <th scope="col">2T Urine Date</th>
+                    <th scope="col">2T Urine Time</th>
+                    <th scope="col">Maternal hair Prenatal Date</th>
+                    <th scope="col">Prenatal Maternal Blood Date</th>
+                    <th scope="col">Perinatal Dust Date</th>
+                    <th scope="col">Prenatal Saliva Date</th>
+                    <th scope="col">3T Urine Date</th>
+                    <th scope="col">3T Urine Time</th>
+                    <th scope="col">3T Spot Blood Date</th>
+                    <th scope="col">3T Green Top Venous Blood Date</th>
+                    <th scope="col">Child DOB</th>
+                    <th scope="col">Birth Tissue Date</th>
+                    <th scope="col">Placenta Delivery Time</th>
+                    <th scope="col">Placenta Delivery Date</th>
+                    <th scope="col">Umbilical Cord Date</th>
+                    <th scope="col">Green Top Birth Date</th>
+                    <th scope="col">Umbilical Cord Blood Date</th>
+                    <th scope="col">Child Consent Date</th>
+                    <th scope="col">Postnatal Maternal Hair Date</th>
+                    <th scope="col">Breastmilk Date</th>
+                    <th scope="col">30day Infant Hair Date</th>
+                    <th scope="col">30day Infant Spot Blood Date</th>
+                    <th scope="col">30day Buccal Swab Date</th>
+                    <th scope="col">30day Nasal Swab Date</th>
+                    <th scope="col">6monthHome Saliva Date</th>
+                    <th scope="col">6monthLab Saliva Date</th>
+                    <th scope="col">6month Hair Date</th>
+                    <th scope="col">6month Buccal Swab Date</th>
+                    <th scope="col">6month Nasal Swab Date</th>
+                    <th scope="col">12month Spot Blood Date</th>
+                    <th scope="col">12month Venous Blood Date/th>
+                    <th scope="col">18month Spot Blood Date</th>
+                    <th scope="col">2year Spot Blood Date</th>
+                    <th scope="col">2year Venous Blood Date</th>
+                    <th scope="col">2year Hair Date</th>
+                    <th scope="col">2year Urine Date</th>
+                    <th scope="col">ECHO-2year Hair Date</th>
+                    <th scope="col">ECHO-2year Urine Date</th>
+                    <th scope="col">ECHO-2year Spot Blood Date</th>
+                    <th scope="col">ECHO-2year Venous Blood Date</th>
+                    <th scope="col">2-2.5year Spot Blood Date</th>
+                    <th scope="col">2-2.5year Venous Blood Date</th>
+                    <th scope="col">2.5year Spot Blood Date</th>
+                    <th scope="col">2.5year Venous Blood Blood Date</th>
+                    <th scope="col">2.5yearHome Saliva Date</th>
+                    <th scope="col">2.5year Dust Date</th>
+                    <th scope="col">2.5year Buccal Swab Date</th>
+                    <th scope="col">2.5year Nasal Swab Date</th>
+                    <th scope="col">3.5year Spot Blood Date</th>
+                    <th scope="col">3.5year Urine Date</th>
+                    <th scope="col">3.5year Hair Date</th>
+                    <th scope="col">3.5year Venous Blood Date</th>
+                    <th scope="col">3.5yearLab Saliva Date</th>
+                    <th scope="col">3.5yearHome Saliva Date</th>
+                    <th scope="col">3.5year Buccal Swab Date</th>
+                    <th scope="col">3.5year Nasal Swab Date</th>
+                    <th scope="col">5year Spot Blood Date</th>
+                    <th scope="col">5year Urine Date</th>
+                    <th scope="col">5year Hair Date</th>
+                    <th scope="col">5year Venous Blood Date</th>
+                    <th scope="col">5yearLab Saliva Date</th>
+                    <th scope="col">5yearHome Saliva Date</th>
+                    <th scope="col">ECHO-4-5year Spot Blood Date</th>
+                    <th scope="col">ECHO-4-5year Urine Date</th>
+                    <th scope="col">ECHO-4-5year Hair Date</th>
+                    <th scope="col">ECHO-4-5year Venous Blood Date</th>
+                    <th scope="col">ECHO-7-8year Hair Date</th>
+                    <th scope="col">ECHO-7-8year Spot Blood Date</th>
+                    <th scope="col">ECHO-7-8year Venous Blood Date</th>
+                    <th scope="col">ECHO-7-8year Urine Date</th>
+                    <th scope="col">ECHO-Tooth#1 Date</th>
+                    <th scope="col">ECHO-Tooth#2 Date</th>
+                    <th scope="col">ECHO-Tooth#3 Date</th>
+                    <th scope="col">ECHO-Tooth#4 Date</th>
+                    <th scope="col">ECHO-Tooth#5 Date</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,7 +99,85 @@
                         </td>
                         <td>
                             {{ $redCapDataMissingLvDataItem['redcap_event_name']}}
-                        </td>                 
+                        </td>
+                        <td>{{$redCapDataMissingLvDataItem['maternal_consent_date']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['withdrawndate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['twotsbdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['twotudate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['twotutime']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['maternalhairprenataldate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['blmaternalblooddate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['dustdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['cortdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['threetudate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['threetutime']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['threetsbdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['threetgreentoptube_date']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['childbday']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['birthtissuedate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['placentattime']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['placentatdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['corddate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['greentop_tube_cord']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['cordbdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['childconsentdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['mhairdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['brstmlkdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['ihairdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['isbdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['buccal_swab_date_1mnth']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['nasal_swab_date_1mnth']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['isalivahomedate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['isalivalabdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['ihair6date']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['buccal_swab_date_6mnth']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['nasal_swab_date_6mnth']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['sbdate12mo']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['ivblood12modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['sb18modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['sb24modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['b24modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['hair24modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['urine24date']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echo2yrhairdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echo2yrurinedate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echo2yrsbdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echo2yrvenousblooddate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['sb2430date']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['vb2430date']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['thirtymonthsbdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['venousblood30modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['saliva30mohomedate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['thirtymonthdustdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['buccal_swab_date_30mnth']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['nasal_swab_date_30_mnth']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['spotblood42modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['urine42modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['hair42modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['venousblood42modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['saliva42modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['saliva42mohomedate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['buccalswab_date']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['nasalswab_date']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['spotblood60modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['urine60modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['hair60modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['venousblood60modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['labsaliva60modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['homesaliva60modate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echo4to5yrspotblooddate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echo4to5yrurinedate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echo4to5yrhairdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echo4to5yrvenousblooddate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echo7to8yrhairdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echo7yrto8yrsbdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echo7yrto8yrvbdate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echo7yrto8yrurinedate']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echotooth1date']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echotooth2date']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echotooth3date']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echotooth4date']}}</td>
+                        <td>{{$redCapDataMissingLvDataItem['echotooth5date']}}</td>            
                     </tr>
                     @endforeach
                 @endif
@@ -58,7 +214,7 @@
             </table>
         </div>
     <div class="card">
-    <h3>2T Urine Date</h3>
+    <h3 id="2">2T Urine Date</h3>
     <table class="table table-striped">
         <thead class="bg-primary text-white">
             <tr>
