@@ -122,11 +122,53 @@ class RedCapController extends Controller
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data, '', '&'));
         $output = curl_exec($ch);
         //print $output;
-        $outputs = json_decode($output, true);
+        $outputs = collect(json_decode($output, true));
+        $redCapData = $outputs;
+        $lvs = $this->lvresults();
+
+        $redCapDataMissingLvData = $redCapData->filter(function($item) use ($lvs){
+            // found something
+            $lvsData = $lvs->filter(function($lvsItem) use ($item){
+                //dd($lvsItem->redcap_event_name,$item['redcap_event_name']);
+                return $lvsItem->hhid == $item['hhid'] && $lvsItem->redcap_event_name == $item['redcap_event_name'];
+            });
+
+            return  $lvsData->count() > 0 ? false : true;
+        });
+        $twotsb = $redCapData->filter(function($item) use ($lvs){
+
+            $visitData = $lvs->filter(function($lvsItem) use ($item){
+                //dd($lvsItem->twotsbdate,$item['twotsbdate']);
+                if($lvsItem->twotsbdate == NULL && $item['twotsbdate'] != NULL){
+                    return $lvsItem->hhid == $item['hhid'] && $lvsItem->redcap_event_name == $item['redcap_event_name'];               
+                }
+                else{
+
+                }
+            });
+
+            return  $visitData->count() > 0 ? true : false;
+        });
+        $twotudate = $redCapData->filter(function($item) use ($lvs){
+            $visitData = $lvs->filter(function($lvsItem) use ($item){
+                if($lvsItem->twotudate == NULL && $item['twotudate'] != NULL){
+                    return $lvsItem->hhid == $item['hhid'] && $lvsItem->redcap_event_name == $item['redcap_event_name'];               
+                }
+                else{
+
+                }
+            });
+
+            return  $visitData->count() > 0 ? true : false;
+        });
         //return $outputs;
+        // dd($outputs, $this->lvresults());
         return view('combo.index')->with([
-            'outputs'=>$outputs, 
-            'lvs' => $this->my_data_interface->lvresults()
+            'redCapData' => $redCapData, 
+            'lvs' => $lvs,
+            'redCapDataMissingLvData' => $redCapDataMissingLvData,
+            'twotsb' => $twotsb,
+            'twotudate' => $twotudate
             ]);
         curl_close($ch);
 

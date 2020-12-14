@@ -51,6 +51,7 @@ Route::get('/redcap', [RedCapController::class, 'callMyAPI2']);
 //Combined controller
 Route::get('/combo', [RedCapController::class, 'callMyAPI']);
 
+
 //upload file controllers
 Route::get('/trans', [TransController::class, 'index']);
 Route::post('/trans/uploadFile', [TransController::class, 'uploadFile']);

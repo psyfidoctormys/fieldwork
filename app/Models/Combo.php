@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Combo extends Model
 {
     use HasFactory;
-    protected $table = 'lv_T';
+    protected $table = 'lvasrc_t';
 }

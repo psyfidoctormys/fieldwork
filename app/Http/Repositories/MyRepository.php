@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Repositories;
-use App\Models\Lv;
+use App\Models\Combo;
 
 class MyRepository implements MyDataInterface {
 
     public function lvresults(){
-        return Lv::all();
+        return Combo::all();
     }
 
     //x == primary key
@@ -15,7 +15,7 @@ class MyRepository implements MyDataInterface {
     }
 
     public function sample($id) {
-        return LV::where('sample_id', $id);
+        return LV::where('sample', $id);
     }
 
 }
