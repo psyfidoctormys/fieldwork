@@ -1,6 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
+   {{-- <div class="col-md-4">
+        <form action="/lv/search" method="get">
+            <div class="form-group">
+                <input type="search" name="search" class="form-group">
+                <span class="form-group-btn">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </span>
+            </div>
+        </form>
+    </div> --}}
     <h1>LabVantage</h1>
     <table class="table table-striped">
         <thead class="bg-primary text-white">

@@ -50,7 +50,7 @@ Route::resource('/lv', LvController::class);
 Route::get('/redcap', [RedCapController::class, 'callMyAPI2']);
 //Combined controller
 Route::get('/combo', [RedCapController::class, 'callMyAPI']);
-
+Route::get('/lv/search', [LvController::class, 'search']);
 
 //upload file controllers
 Route::get('/trans', [TransController::class, 'index']);

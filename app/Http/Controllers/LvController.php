@@ -59,7 +59,7 @@ class LvController extends Controller
      */
     public function show($sample)
     {
-        return Post::find($sample);      
+        //return Lv::find($sample);      
     }
 
     /**
@@ -94,6 +94,12 @@ class LvController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function search(Request $request, $externalSubject)
+    {
+        //$search = $request->get('search');
+        //$lvs = DB::table('lvs')->where('externalSubject', 'like','%',$search,'%');
+        //return view('lv.index')->with('lvs', $lvs);
     }
 }
 
