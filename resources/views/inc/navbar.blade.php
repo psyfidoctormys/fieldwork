@@ -17,15 +17,15 @@
               <li class="nav-item active">
                 <a class="nav-link" aria-current="page" href="/">Home</a>
               </li>
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <a class="nav-link" href="/about">About</a>
               </li>
-              <!--<li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="/service">Services</a>
-              </li>-->
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="/trans">LV File Upload</a>
-              </li>
+              </li>-->
               <li class="nav-item">
                 <a class="nav-link" href="/lv">LabVantage</a>
               </li>
@@ -33,7 +33,7 @@
                 <a class="nav-link" href="/redcap">RedCap</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/combo">Comparison</a>
+                <a class="nav-link" href="/combo">Needs Loading</a>
               </li>
             </ul>
             <!-- Right Side Of Navbar -->
